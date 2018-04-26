@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class SecondViewController: UIViewController {
+class BasicSecondViewController: UIViewController {
 
     var text: String! {
         willSet {
