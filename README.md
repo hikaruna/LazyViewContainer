@@ -1,4 +1,4 @@
-# LazyViewContainer
+# LazyViewContainer [![Build Status](https://travis-ci.org/hikaruna/LazyViewContainer.svg?branch=master)](https://travis-ci.org/hikaruna/LazyViewContainer)
 LazyViewContainer は、時間がかかる処理のための処理中の画面を簡単に構築する方法を提供します。
 
 ## Installing
@@ -10,6 +10,9 @@ github "hikaruna/LazyViewContainer"
 ```
 
 詳細の手順は、https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos
+
+### CocoaPods
+No support.
 
 ## Usage
 
