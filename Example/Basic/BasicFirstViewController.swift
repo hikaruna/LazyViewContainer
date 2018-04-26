@@ -9,7 +9,7 @@
 import UIKit
 import LazyViewContainer
 
-class FirstViewController: UIViewController {
+class BasicFirstViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier ?? "" {
@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
                 sleep(3)
                 print("Task finished.")
                 guard let `self` = self else { return nil }
-                let secondViewController = self.storyboard!.instantiateViewController(withIdentifier: "Second") as! SecondViewController
+                let secondViewController = self.storyboard!.instantiateViewController(withIdentifier: "Second") as! BasicSecondViewController
                 secondViewController.text = "Second View."
                 return secondViewController
             }
