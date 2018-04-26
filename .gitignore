@@ -26,3 +26,4 @@ DerivedData/
 
 ## Customize
 *.xcworkspace
+/LazyViewContainer.framework.zip
