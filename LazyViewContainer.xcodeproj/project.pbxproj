@@ -11,6 +11,10 @@
 		173A6FE02091E267009470AB /* Unwind.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173A6FDF2091E267009470AB /* Unwind.storyboard */; };
 		173A6FE22091E281009470AB /* UnwindBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FE12091E281009470AB /* UnwindBaseViewController.swift */; };
 		173A6FE42091E299009470AB /* UnwindSignupFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FE32091E299009470AB /* UnwindSignupFormViewController.swift */; };
+		173A6FE72091EB61009470AB /* Error.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173A6FE62091EB61009470AB /* Error.storyboard */; };
+		173A6FE92091EB78009470AB /* ErrorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FE82091EB78009470AB /* ErrorFirstViewController.swift */; };
+		173A6FEB2091F249009470AB /* SampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FEA2091F249009470AB /* SampleError.swift */; };
+		173A6FED2091F286009470AB /* ErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FEC2091F286009470AB /* ErrorAlertController.swift */; };
 		17AEDDD320907B9400F0BC5D /* LazyViewContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AEDDC920907B9400F0BC5D /* LazyViewContainer.framework */; };
 		17AEDDD820907B9400F0BC5D /* LazyViewContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AEDDD720907B9400F0BC5D /* LazyViewContainerTests.swift */; };
 		17AEDDE420907C4900F0BC5D /* LazyViewContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AEDDE320907C4900F0BC5D /* LazyViewContainer.storyboard */; };
@@ -61,6 +65,10 @@
 		173A6FDF2091E267009470AB /* Unwind.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Unwind.storyboard; sourceTree = "<group>"; };
 		173A6FE12091E281009470AB /* UnwindBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwindBaseViewController.swift; sourceTree = "<group>"; };
 		173A6FE32091E299009470AB /* UnwindSignupFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwindSignupFormViewController.swift; sourceTree = "<group>"; };
+		173A6FE62091EB61009470AB /* Error.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Error.storyboard; sourceTree = "<group>"; };
+		173A6FE82091EB78009470AB /* ErrorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFirstViewController.swift; sourceTree = "<group>"; };
+		173A6FEA2091F249009470AB /* SampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleError.swift; sourceTree = "<group>"; };
+		173A6FEC2091F286009470AB /* ErrorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertController.swift; sourceTree = "<group>"; };
 		17AEDDC920907B9400F0BC5D /* LazyViewContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyViewContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AEDDCD20907B9400F0BC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17AEDDD220907B9400F0BC5D /* LazyViewContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyViewContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +133,17 @@
 			path = Unwind;
 			sourceTree = "<group>";
 		};
+		173A6FE52091EB51009470AB /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				173A6FE62091EB61009470AB /* Error.storyboard */,
+				173A6FE82091EB78009470AB /* ErrorFirstViewController.swift */,
+				173A6FEA2091F249009470AB /* SampleError.swift */,
+				173A6FEC2091F286009470AB /* ErrorAlertController.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		17AEDDBF20907B9400F0BC5D = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +190,7 @@
 				17AEDE23209087F700F0BC5D /* Main.storyboard */,
 				173A6FD92091DFA8009470AB /* Basic */,
 				173A6FDE2091E24A009470AB /* Unwind */,
+				173A6FE52091EB51009470AB /* Error */,
 				17AEDE26209087F800F0BC5D /* Assets.xcassets */,
 				17AEDE28209087F800F0BC5D /* LaunchScreen.storyboard */,
 				17AEDE2B209087F800F0BC5D /* Info.plist */,
@@ -309,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AEDE2A209087F800F0BC5D /* LaunchScreen.storyboard in Resources */,
+				173A6FE72091EB61009470AB /* Error.storyboard in Resources */,
 				173A6FE02091E267009470AB /* Unwind.storyboard in Resources */,
 				173A6FDB2091DFCC009470AB /* Basic.storyboard in Resources */,
 				17AEDE27209087F800F0BC5D /* Assets.xcassets in Resources */,
@@ -339,8 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173A6FE92091EB78009470AB /* ErrorFirstViewController.swift in Sources */,
 				173A6FE22091E281009470AB /* UnwindBaseViewController.swift in Sources */,
 				17AEDE22209087F700F0BC5D /* BasicFirstViewController.swift in Sources */,
+				173A6FED2091F286009470AB /* ErrorAlertController.swift in Sources */,
+				173A6FEB2091F249009470AB /* SampleError.swift in Sources */,
 				17AEDE20209087F700F0BC5D /* AppDelegate.swift in Sources */,
 				173A6FE42091E299009470AB /* UnwindSignupFormViewController.swift in Sources */,
 				17AEDE3520908CE100F0BC5D /* BasicSecondViewController.swift in Sources */,

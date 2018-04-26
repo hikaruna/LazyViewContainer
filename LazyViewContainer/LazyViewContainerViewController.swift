@@ -3,11 +3,16 @@ import UIKit
 
 open class LazyViewContainerViewController: UIViewController {
 
-    open var doInBackground: (() -> UIViewController?)! {
+    open var doInBackground: (() throws -> UIViewController?)! {
         willSet {
             guard !isViewLoaded else { fatalError("Must set before view load.") }
         }
     }
+
+    /// doInBackgroundの処理でerrorがthrowされた場合にmainThreadでcallされる
+    /// - parameter error: throwされたerrorObject.
+    /// - parameter lazyViewContainerViewController: self.
+    open var onError: ((Error, LazyViewContainerViewController) -> Void)?
 
     open var progressViewController: UIViewController? {
         willSet {
@@ -42,10 +47,17 @@ open class LazyViewContainerViewController: UIViewController {
         contentViewController = progressViewController ?? defaultProgressViewController
 
         DispatchQueue.global(qos: .default).async { [weak self] in
-            guard let contentViewController = self?.doInBackground() else { return }
+            do {
+                guard let contentViewController = try self?.doInBackground() else { return }
 
-            DispatchQueue.main.async { [weak self] in
-                self?.contentViewController = contentViewController
+                DispatchQueue.main.async { [weak self] in
+                    self?.contentViewController = contentViewController
+                }
+            } catch {
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self else { return }
+                    self.onError?(error, self)
+                }
             }
         }
     }
