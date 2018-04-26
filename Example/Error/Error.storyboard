@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p5o-pj-utZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error First View Controller-->
+        <scene sceneID="Cn5-18-AZe">
+            <objects>
+                <viewController id="p5o-pj-utZ" customClass="ErrorFirstViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xlo-H7-63h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Dz-6Ql">
+                                <rect key="frame" x="164" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="6oF-kx-vC9" kind="show" identifier="ToSecond" id="Ilm-oM-vMC"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U60-Hw-zfF">
+                                <rect key="frame" x="0.0" y="50" width="375" height="51.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorEnabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-Ts-D0V">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxh-5N-bta">
+                                        <rect key="frame" x="0.0" y="20.5" width="377" height="31"/>
+                                        <connections>
+                                            <action selector="isErrorSwitchValueChanged:" destination="p5o-pj-utZ" eventType="valueChanged" id="3CJ-BN-V8x"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uf8-yw-tYq" firstAttribute="trailing" secondItem="U60-Hw-zfF" secondAttribute="trailing" id="D4y-v8-XyS"/>
+                            <constraint firstItem="U60-Hw-zfF" firstAttribute="top" secondItem="uf8-yw-tYq" secondAttribute="top" constant="30" id="b9x-LD-vDd"/>
+                            <constraint firstItem="Pbj-Dz-6Ql" firstAttribute="centerX" secondItem="Xlo-H7-63h" secondAttribute="centerX" id="gv5-Hw-bie"/>
+                            <constraint firstItem="Pbj-Dz-6Ql" firstAttribute="centerY" secondItem="Xlo-H7-63h" secondAttribute="centerY" id="nwq-OS-rRk"/>
+                            <constraint firstItem="U60-Hw-zfF" firstAttribute="leading" secondItem="uf8-yw-tYq" secondAttribute="leading" id="r0w-sP-LtD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uf8-yw-tYq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="od7-OX-3GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="137"/>
+        </scene>
+        <!--LazyViewContainer-->
+        <scene sceneID="kSJ-i4-xEb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LazyViewContainer" bundleIdentifier="net.hikaruna.LazyViewContainer" id="6oF-kx-vC9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wai-g7-wMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MZA-Nq-y1W">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="cwM-0Z-ZAe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bCO-9l-9h6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-DW-T1x">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gcm-ep-fUw" firstAttribute="trailing" secondItem="aYN-DW-T1x" secondAttribute="trailing" id="6BY-xI-maG"/>
+                            <constraint firstItem="aYN-DW-T1x" firstAttribute="leading" secondItem="Gcm-ep-fUw" secondAttribute="leading" id="Ok0-rd-8lv"/>
+                            <constraint firstItem="aYN-DW-T1x" firstAttribute="top" secondItem="Gcm-ep-fUw" secondAttribute="top" id="Xd7-Ol-gz5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gcm-ep-fUw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Od-Qs-qx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="136"/>
+        </scene>
+    </scenes>
+</document>
