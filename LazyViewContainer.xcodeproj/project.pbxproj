@@ -15,6 +15,8 @@
 		173A6FE92091EB78009470AB /* ErrorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FE82091EB78009470AB /* ErrorFirstViewController.swift */; };
 		173A6FEB2091F249009470AB /* SampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FEA2091F249009470AB /* SampleError.swift */; };
 		173A6FED2091F286009470AB /* ErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FEC2091F286009470AB /* ErrorAlertController.swift */; };
+		173A6FF12091FBB9009470AB /* CustomizedProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173A6FF02091FBB9009470AB /* CustomizedProgress.storyboard */; };
+		173A6FF32091FBC1009470AB /* CustomizedProgressFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A6FF22091FBC1009470AB /* CustomizedProgressFirstViewController.swift */; };
 		17AEDDD320907B9400F0BC5D /* LazyViewContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AEDDC920907B9400F0BC5D /* LazyViewContainer.framework */; };
 		17AEDDD820907B9400F0BC5D /* LazyViewContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AEDDD720907B9400F0BC5D /* LazyViewContainerTests.swift */; };
 		17AEDDE420907C4900F0BC5D /* LazyViewContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AEDDE320907C4900F0BC5D /* LazyViewContainer.storyboard */; };
@@ -69,6 +71,8 @@
 		173A6FE82091EB78009470AB /* ErrorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFirstViewController.swift; sourceTree = "<group>"; };
 		173A6FEA2091F249009470AB /* SampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleError.swift; sourceTree = "<group>"; };
 		173A6FEC2091F286009470AB /* ErrorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertController.swift; sourceTree = "<group>"; };
+		173A6FF02091FBB9009470AB /* CustomizedProgress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomizedProgress.storyboard; sourceTree = "<group>"; };
+		173A6FF22091FBC1009470AB /* CustomizedProgressFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizedProgressFirstViewController.swift; sourceTree = "<group>"; };
 		17AEDDC920907B9400F0BC5D /* LazyViewContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyViewContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AEDDCD20907B9400F0BC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17AEDDD220907B9400F0BC5D /* LazyViewContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyViewContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,15 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		173A6FEF2091FB9A009470AB /* CustomizedProgress */ = {
+			isa = PBXGroup;
+			children = (
+				173A6FF02091FBB9009470AB /* CustomizedProgress.storyboard */,
+				173A6FF22091FBC1009470AB /* CustomizedProgressFirstViewController.swift */,
+			);
+			path = CustomizedProgress;
+			sourceTree = "<group>";
+		};
 		17AEDDBF20907B9400F0BC5D = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 				17AEDE1F209087F700F0BC5D /* AppDelegate.swift */,
 				17AEDE23209087F700F0BC5D /* Main.storyboard */,
 				173A6FD92091DFA8009470AB /* Basic */,
+				173A6FEF2091FB9A009470AB /* CustomizedProgress */,
 				173A6FDE2091E24A009470AB /* Unwind */,
 				173A6FE52091EB51009470AB /* Error */,
 				17AEDE26209087F800F0BC5D /* Assets.xcassets */,
@@ -329,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173A6FF12091FBB9009470AB /* CustomizedProgress.storyboard in Resources */,
 				17AEDE2A209087F800F0BC5D /* LaunchScreen.storyboard in Resources */,
 				173A6FE72091EB61009470AB /* Error.storyboard in Resources */,
 				173A6FE02091E267009470AB /* Unwind.storyboard in Resources */,
@@ -380,6 +395,7 @@
 				173A6FE92091EB78009470AB /* ErrorFirstViewController.swift in Sources */,
 				173A6FE22091E281009470AB /* UnwindBaseViewController.swift in Sources */,
 				17AEDE22209087F700F0BC5D /* BasicFirstViewController.swift in Sources */,
+				173A6FF32091FBC1009470AB /* CustomizedProgressFirstViewController.swift in Sources */,
 				173A6FED2091F286009470AB /* ErrorAlertController.swift in Sources */,
 				173A6FEB2091F249009470AB /* SampleError.swift in Sources */,
 				17AEDE20209087F700F0BC5D /* AppDelegate.swift in Sources */,
